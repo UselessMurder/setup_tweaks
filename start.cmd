@@ -1,2 +1,2 @@
-powershell -command "& {Set-ExecutionPolicy -ExecutionPolicy remotesigned}"
-powershell -File start.ps1
+powershell -Command "& {Set-ExecutionPolicy -ExecutionPolicy RemoteSigned}"
+powershell -NoProfile -ExecutionPolicy ByPass -File start.ps1
