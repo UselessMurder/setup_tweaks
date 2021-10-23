@@ -9,9 +9,9 @@ if($Preferences.DisableRealtimeMonitoring -eq $false) {
 $Password = Read-Host 'Enter password' -AsSecureString
 $pass = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($Password))
 
-7z x cure.7z "-p$pass"
+7z x plugins\cure.7z "-p$pass"
 
-Start-Process .\cure\run.cmd
+Start-Process .\cure\run.cmd -WorkingDirectory cure -Wait
 
 Remove-Item .\cure -Force -Recurse
 
