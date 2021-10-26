@@ -1,4 +1,4 @@
-$apps=@("vcredist-all", "rust", "llvm", "dotnetcoresdk", "dotnet4.7", "cmake", "ninja", "jdk11", "jdk8", "make", "mingw")
+$apps=@("vcredist-all", "microsoft-build-tools", "rust", "llvm", "cmake", "ninja", "make", "mingw", "meson")
 Foreach ($app in $apps) {
 choco install $app -y
 }
